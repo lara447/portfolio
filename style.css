@@ -1,0 +1,238 @@
+:root {
+    --coral: #ee6f63;
+    --coral-escuro: #d85a4e;
+    --texto: #222;
+    --texto-suave: #555;
+    --fundo: #ffffff;
+    --claro: #fdf0ee;
+    --fonte-titulo: "Oswald", "Arial Narrow", sans-serif;
+    --fonte-texto: "Open Sans", Arial, sans-serif;
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-texto);
+    color: var(--texto);
+    background: var(--coral);
+    line-height: 1.7;
+}
+
+header {
+    background: var(--coral);
+    color: #fff;
+    padding: 70px 24px 130px;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 56px;
+}
+
+.foto {
+    flex: 0 0 240px;
+    width: 240px;
+    height: 330px;
+    border-radius: 120px;
+    object-fit: cover;
+    background: #f7a79f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fonte-titulo);
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.header-texto {
+    flex: 1;
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 0 0 18px;
+    color: #4a1a15;
+}
+
+.redes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+}
+
+.redes h2 {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0 6px 0 0;
+    color: #fff;
+    opacity: 0.85;
+}
+
+.redes a {
+    color: var(--coral-escuro);
+    background: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 6px 18px;
+    border-radius: 999px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.redes a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--fonte-titulo);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+}
+
+nav a:hover {
+    border-bottom-color: #fff;
+}
+
+main {
+    background: var(--fundo);
+    border-radius: 56px 56px 0 0;
+    margin-top: -70px;
+    padding: 70px 24px 80px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto 56px;
+    scroll-margin-top: 24px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+main h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 20px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--coral);
+    display: inline-block;
+}
+
+main h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+    color: var(--coral-escuro);
+}
+
+main p {
+    margin: 0 0 14px;
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    text-align: justify;
+}
+
+article {
+    background: var(--claro);
+    border-left: 6px solid var(--coral);
+    border-radius: 0 20px 20px 0;
+    padding: 22px 26px 12px;
+    margin-bottom: 24px;
+}
+
+#conhecimentos h3 {
+    margin-top: 22px;
+    color: var(--texto);
+}
+
+#conhecimentos h3::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: var(--coral);
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+@media (max-width: 760px) {
+    header {
+        padding: 50px 20px 110px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+    }
+
+    .foto {
+        flex-basis: auto;
+        width: 200px;
+        height: 270px;
+        border-radius: 100px;
+        font-size: 56px;
+    }
+
+    .redes,
+    nav ul {
+        justify-content: center;
+    }
+
+    main {
+        border-radius: 36px 36px 0 0;
+        padding: 50px 18px 60px;
+    }
+
+    main p {
+        text-align: left;
+    }
+}
